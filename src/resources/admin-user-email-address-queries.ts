@@ -1,5 +1,5 @@
 import "server-only";
-import db from "@/drizzle";
+import { database as db } from "@/drizzle";
 import { adminUserEmailAddresses, lower } from "@/drizzle/schema";
 
 export const findAdminUserEmailAddresses = async () => {
