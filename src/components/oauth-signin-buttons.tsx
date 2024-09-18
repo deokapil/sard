@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  SiGithub,
-  SiGithubHex,
-  SiGoogle,
-  SiGoogleHex,
-} from "@icons-pack/react-simple-icons";
+import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 import { oauthSigninAction } from "@/actions/oauth-signin-action";
 import { useEffect, useState } from "react";
@@ -45,17 +40,8 @@ export const OAuthSigninButtons = ({ signup }: OAuthSigninButtonsProps) => {
         onClick={clickHandler.bind(null, "google")}
         // onClick={() => clickHandler("google")}
       >
-        <SiGoogle color={SiGoogleHex} className="mr-2" />
+        <FcGoogle className="h-5 w-5" />
         {text} with Google
-      </Button>
-
-      <Button
-        variant="secondary"
-        className="mt-2 w-full"
-        onClick={clickHandler.bind(null, "github")}
-      >
-        <SiGithub color={SiGithubHex} className="mr-2" />
-        {text} with Github
       </Button>
 
       {errMessage && (
@@ -77,13 +63,8 @@ export const OAuthSigninButtonsSkeleton = ({
   return (
     <div className="max-w-[400px]">
       <Button variant="secondary" className="w-full">
-        <SiGoogle color={SiGoogleHex} className="mr-2" />
+        <FcGoogle className="h-5 w-5" />
         {text} with Google
-      </Button>
-
-      <Button variant="secondary" className="mt-2 w-full">
-        <SiGithub color={SiGithubHex} className="mr-2" />
-        {text} with Github
       </Button>
     </div>
   );

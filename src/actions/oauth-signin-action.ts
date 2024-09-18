@@ -3,6 +3,8 @@
 import { signIn } from "@/auth";
 import { isRedirectError } from "next/dist/client/components/redirect";
 
+import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+
 export async function oauthSigninAction(provider: "google" | "github") {
   try {
     await signIn(provider, { redirectTo: "/profile" });
