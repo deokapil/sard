@@ -23,7 +23,7 @@ export const OAuthSigninButtons = ({ signup }: OAuthSigninButtonsProps) => {
     }
   }, [error]);
 
-  const clickHandler = async (provider: "google" | "github") => {
+  const clickHandler = async (provider: "google") => {
     try {
       await oauthSigninAction(provider);
     } catch (err) {
@@ -33,7 +33,7 @@ export const OAuthSigninButtons = ({ signup }: OAuthSigninButtonsProps) => {
 
   const text = signup ? "Sign up" : "Sign in";
   return (
-    <div className="max-w-[400px]">
+    <div className="flex max-w-[400px] items-center justify-center">
       <Button
         variant="secondary"
         className="w-full"

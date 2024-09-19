@@ -1,6 +1,6 @@
 "use server";
 
-import db from "@/drizzle";
+import { database as db } from "@/drizzle";
 import { verificationTokens } from "@/drizzle/schema";
 import { VERIFICATION_TOKEN_EXP_MIN } from "@/lib/constants";
 

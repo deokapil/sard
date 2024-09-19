@@ -6,7 +6,7 @@ import { findVerificationTokenByToken } from "@/resources/verification-token-que
 import { ResetPasswordSchema } from "@/validators/reset-password-validator";
 import * as v from "valibot";
 import argon2 from "argon2";
-import db from "@/drizzle";
+import { database as db } from "@/drizzle";
 import { eq } from "drizzle-orm";
 
 type Res =
